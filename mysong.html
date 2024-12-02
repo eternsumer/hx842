@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胡潇的网页</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+            text-decoration: none;
+        }
+        header h1{
+            font-size: 40px;
+            position: absolute;
+            left:10px;
+            color:white;
+        }
+        header{
+            height: 60px;
+            background:linear-gradient(rgb(0, 128, 255),#1243F6);
+            display: flex;
+            flex-direction: row;
+        }
+        .navlist li{
+            float:right;
+            height:40px;
+            width:100px;
+            line-height:60px;
+            text-align: center;
+        }
+        .navlist a{
+            color:white;
+            display:block;
+        }
+        .navlist{
+            width:800px;
+            margin:auto;
+        }
+        .navlist a:hover{
+            background:#127cf6
+        }
+        main {
+    background-position: 100%;
+    background-color: #2f7bf4;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 97vh;
+    display: flex;
+    justify-content: left;
+    color: #080bcb;
+}
+    .word{
+        font-size: 100px;
+        position: absolute;
+        height: 40px;
+        top:300px;
+        left:100px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>自我介绍</h1>
+    <div class="nav">
+    <ul class="navlist">
+        <li class="nav-item"><a href="https://regret1037.github.io/room409/" class="nav-link">返回寝室主页</a></li>
+        <li><a href="callme.html">联系我</a></li>
+        <li><a href="mysong.html">我的歌单</a></li>
+        <li><a href="photo.html">旅行照片</a></li>
+        <li><a href="aboutme.html">关于我</a></li>       
+        <li><a href="index.html">首页</a></li>
+    </ul>
+</header>
+</div>
+<main> 
+    <div class="page_con">
+        <div class="music" style="display: flex;">
+            <div class="music-1">
+                <h1>Viva La Vida-Coldplay</h1>
+                <img src="./images/800.jpg" alt="" class="music-img" height="500px" width="500px">
+                <audio controls preload src="./song/3.mp3"></audio>
+            </div>
+            <div class="music-2">
+                <h1>浸春芜-塞壬唱片</h1>
+                <img src="./images/OIP-C.jpg" alt="" class="music-img" height="500px" width="500px">
+                <audio controls preload src="./song/2.mp3" ></audio>
+            </div>
+            <div class="music-3">
+                <h1>Closer-The Chainsmokers</h1>
+                <img src="./images/20200909125736118337.jpg" alt="" class="music-img" height="500px" width="500px">
+                <audio controls preload="auto" src="./song/1.mp3" ></audio>
+            </div>
+        </div>
+        
+    </div>
+</main>
+</body>
+</html>

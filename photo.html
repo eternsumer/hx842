@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胡潇的网页</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+            text-decoration: none;
+        }
+        header h1{
+            font-size: 40px;
+            position: absolute;
+            left:10px;
+            color:white;
+        }
+        header{
+            height: 60px;
+            background:linear-gradient(rgb(0, 128, 255),#1243F6);
+            display: flex;
+            flex-direction: row;
+        }
+        .navlist li{
+            float:right;
+            height:40px;
+            width:100px;
+            line-height:60px;
+            text-align: center;
+        }
+        .navlist a{
+            color:white;
+            display:block;
+        }
+        .navlist{
+            width:800px;
+            margin:auto;
+        }
+        .navlist a:hover{
+            background:#127cf6
+        }
+        main {
+    background-position: 100%;
+    background-color: #2f7bf4;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 97vh;
+    display: flex;
+    justify-content: left;
+    color: #080bcb;
+}
+    .word{
+        font-size: 70px;
+        position: absolute;
+        height: 40px;
+        top:300px;
+        left:100px;
+    }
+    #max{
+  width: 900px;
+  height: 500px;
+  align-items: center;
+  margin: 5% auto;
+  margin-top: 0%;
+}
+.re{
+  position: relative;
+  height: 400px;
+}
+.re ul{
+  list-style-type:none ;
+}
+.re ul>li{
+  width: 600px;
+  height: 300px;
+  position: absolute;
+
+  transition: 1s;
+  opacity: 0;
+}
+.re ul>li img{
+  width: 900px;
+  height: 500px;
+  border-radius: 10%;
+  border: 15px solid #fffbd6;
+}
+#max ol {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5,75px);
+  grid-template-rows: auto;
+  grid-gap: 1em;gap: 1em;
+  float: right;
+  margin-top: 450px;
+  list-style: none;
+  top:0;left:0;
+}
+#max ol li {
+  width: 25px;
+  height: 10px;
+  font-size: 15px;
+  line-height: 20px;
+  float: left;
+  text-align: center;
+  border-radius: 2em;
+  border: 5px solid #999999;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>自我介绍</h1>
+         <ul class="navlist">
+        <li class="nav-item"><a href="https://regret1037.github.io/room409/" class="nav-link">返回寝室主页</a></li>
+        <li><a href="callme.html">联系我</a></li>
+        <li><a href="mysong.html">我的歌单</a></li>
+        <li><a href="photo.html">旅行照片</a></li>
+        <li><a href="aboutme.html">关于我</a></li>       
+        <li><a href="index.html">首页</a></li>
+    </ul>
+</header>
+</div>
+<main> 
+    <div id="max">
+        <div class="re">
+            <ul>
+                <li><img src="./images/IMG_0118.JPG"></li>
+                <li><img src="./images/IMG_0994(1).JPG"></li>
+                <li><img src="./images/IMG_1462.JPG"></li>
+                <li><img src="./images/DSC00396.JPG"></li>
+                <li><img src="./images/32C527198BAEBB269674449F8E5FBDC7.png"></li>
+            </ul>
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+    <script>window.onload = function(){
+        var box=this.document.getElementsByClassName("re")[0];
+        var lik=box.getElementsByTagName("li");
+        function fun(i,j){
+          lik[i].style.opacity=1;
+          lik[j].style.opacity=0;
+          lik[i+5].style.backgroundColor="#ffffff";
+          lik[j+5].style.backgroundColor="#00000000"
+        }
+        fun(0,1);
+        var i =0;
+        function auto(){
+          if(++i>=5){
+            i=0;
+            fun(0,4);
+          }
+          else fun(i,i-1);
+        }
+        timer=this.setInterval(auto,2000);
+        box.onmouseover = function () { 
+          console.log('good');
+          clearInterval(timer);
+        }
+        box.onmouseout = function () { 
+          timer = setInterval(auto, 2000); 
+        }
+        var j =0;
+        for(;j<5;j++){
+          lik[j+5].ind=j;
+          lik[j+5].onclick=function(){
+            fun(this.ind,i)
+            i=this.ind;
+          }
+        }
+      
+      }
+      </script>
+</main>
+</body>
+</html>
